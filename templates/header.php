@@ -70,17 +70,15 @@
                     </div>
                 <?php endif; ?>
                 <?php if ($_SESSION['username'] !== NULL) : ?>
-                    <form action="forms/sign_out.php">
-                        <div class="navbar-end">
-                            <div class="navbar-item">
-                                <div class="buttons">
-                                    <a class="button is-primary" href="">
-                                        <strong>Sign Out</strong>
-                                    </a>
-                                </div>
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <div class="buttons">
+                                <a class="button is-primary" href="signout.php">
+                                    <strong>Sign Out</strong>
+                                </a>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 <?php endif; ?>
             </div>
         </nav>

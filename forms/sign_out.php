@@ -1,5 +1,7 @@
 <?php
-
-    $_SESSION['username'] = NULL;
-    
+    function signout() {
+        $_SESSION['username'] = NULL;
+        session_destroy();
+        return (1);
+    }
 ?>
