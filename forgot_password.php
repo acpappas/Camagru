@@ -32,7 +32,7 @@
                     <div class="container has-text-centered">
                         <div class="columns is-centered">
                             <div class="column is-5 is-4-desktop">
-                                <form method="post" action="###">
+                                <form method="post" action="forms/resetpassword.php">
 								<!-- need to check validity of email here and generate a new password via email. should redirect to "not received email?" resend password email page ** will make that -->
                                     <div class="field">
                                         <div class="control">
@@ -40,7 +40,7 @@
                                         </div>
                                     </div>
                                     <div class="field">
-                                        <button class="button is-primary is-fullwidth" href="">Give me a new password!</button>
+                                        <button class="button is-primary is-fullwidth" href="" type="Submit">Give me a new password!</button>
                                     </div>
                                     </span>
                                 </form>
