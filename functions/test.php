@@ -1,5 +1,5 @@
 <?php
-    require_once("verifyLoginDetails.php");
+    include "/homes/hde-vos/Documents/camagru/config/database.php";
 
     verifyLoginDetails("Hallocoos", "12345678");
 ?>

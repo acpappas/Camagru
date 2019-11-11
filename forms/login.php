@@ -21,8 +21,7 @@
             $_SESSION['login_success'] = FALSE;
         }
     }
-        echo "asdf";
-        echo "<script>window.open('../home_page.php','_self')</script>";
+    echo "<script>window.open('../home_page.php','_self')</script>";
 
 ?>
 
