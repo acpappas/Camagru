@@ -108,7 +108,7 @@ function getImageDataUrl(){
     console.log(ajax.status);
 	if (ajax.status < 300) {
 		// What do when the request is successful
-		console.log('success!', ajax);
+		window.location.reload("./editor.php");
 	} else {
 		// What do when the request fails
 		console.log('The request failed!');
