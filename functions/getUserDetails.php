@@ -1,7 +1,7 @@
 <?php
 
     function getUserImages() {
-        include "../database.php";
+        include "config/database.php";
         include "comments.php";
         include "likeFunctions.php";
         $dbh = new PDO($DB_DSN, $DB_USER, $DB_PASSWORD);
@@ -59,7 +59,7 @@
     function deleteImage($id) {
 		// ini_set('display_errors', 1);
 
-        include "../config/database.php";
+        include "config/database.php";
         $dbh = new PDO($DB_DSN, $DB_USER, $DB_PASSWORD);
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -75,7 +75,7 @@
     }
 
 	function getEditorImages() {
-		// ini_set('display_errors', 1);
+		//ini_set('display_errors', 1);
 		session_start();
 		include "config/database.php";
 		include "comments.php";
@@ -102,7 +102,7 @@
     function uploadProfileImage() {
         // ini_set("display_errors", 1);
         session_start();
-        include "../../config/database.php";
+        include "config/database.php";
         $dbh = new PDO($DB_DSN, $DB_USER, $DB_PASSWORD);
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
@@ -128,7 +128,7 @@
                         $encImage = base64_encode($data);
         
                         $stmnt = $dbh->prepare("UPDATE `user` SET `picturesource`=? WHERE (`id`=?);");
-                        $stmnt->execute(["data:image;base64," . $encImage, $userId]);
+                        $stmnt->execute(["data:image/png;base64," . $encImage, $userId]);
                         
                         header("Location: ".$_SESSION['URI']);
                     }

@@ -34,13 +34,13 @@
                                     <div class="field">
                                         <div class="control">
                                             <!-- Remove the value="" -->
-                                            <input class="input" type="text" name="username" placeholder="Username">
+                                            <input class="input" type="text" name="username" placeholder="Username" autocomplete="username">
                                         </div>
                                     </div>
                                     <div class="field">
                                         <div class="control">
                                             <!-- Remove the value="" -->
-                                            <input class="input" type="password" name="password" placeholder="Password">
+                                            <input class="input" type="password" name="password" placeholder="Password" autocomplete="current-password">
                                         </div>
                                     </div>
                                     <div class="field">

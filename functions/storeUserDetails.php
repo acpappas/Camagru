@@ -36,7 +36,7 @@
         $_SESSION['token'] = md5( rand(0,1000) );
         $token = $_SESSION['token'];
         $stmt = $dbh->prepare("INSERT INTO `user` (`username`, `password`, `email`, `token`, `picturesource`) VALUES (?, ?, ?, ?, ?);");
-        if ($stmt->execute([$username, hash('whirlpool', $password), $email, $token, $defaultimage])) {
+        if ($stmt->execute([$username, hash('whirlpool', $password), $email, $token, "data:image/png;base64," . $defaultimage])) {
             $stmt = null;
             return (1);
         } else {

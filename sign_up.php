@@ -30,25 +30,25 @@
                                     <div class="field">
                                         <div class="control">
                                             <!-- REMOVE THE value="" -->
-                                            <input class="input" type="text" name="username" placeholder="Username">
+                                            <input class="input" type="text" name="username" placeholder="Username" autocomplete="username">
                                         </div>
                                     </div>
                                     <div class="field">
                                         <div class="control">
                                             <!-- REMOVE THE value="" -->
-                                            <input class="input" type="text" name="email" placeholder="Email">
+                                            <input class="input" type="text" name="email" placeholder="Email" autocomplete="email">
                                         </div>
                                     </div>
                                     <div class="field">
                                         <div class="control">
                                             <!-- REMOVE THE value="" -->
-                                            <input class="input" type="password" name="password" placeholder="Password">
+                                            <input class="input" type="password" name="password" placeholder="Password" autocomplete="new-password">
                                         </div>
                                     </div>
                                     <div class="field">
                                         <div class="control">
                                             <!-- REMOVE THE value="" -->
-                                            <input class="input" type="password" name="repeatpassword" placeholder="Repeat Password">
+                                            <input class="input" type="password" name="repeatpassword" placeholder="Repeat Password" autocomplete="new-password">
                                         </div>
                                     </div>
                                     <div class="field is-grouped">
@@ -59,7 +59,7 @@
                                     <span>
                                         <?php
                                         if ($_SESSION['signup_success'] == TRUE) {
-                                            echo "Signup success please check your email to verify your account. After account verification, you can set you account details in the settings section.";
+                                            echo "Signup success please check your email to verify your account. After account verification, you can set your account details in the settings section.";
                                             $_SESSION['error'] = NULL;
                                             $_SESSION['signup_success'] = NULL;
                                         } else if ($_SESSION['error'] !== NULL) {
